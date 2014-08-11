@@ -32,7 +32,8 @@ def handler(signum, frame):
 	try:
 		print 'handler called'
 		print signum, frame
-
+	except Exception, fault:
+		print 'Failure in handler', str(fault)
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
